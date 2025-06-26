@@ -29,7 +29,7 @@ public class ProductBuilder {
         return new Coordinates(x, y);
     }
 
-    private Organization buildOrganization() throws EndInputException {
+    public Organization buildOrganization() throws EndInputException {
         System.out.print("Добавить организацию-производителя?(y/n): ");
         if (!safeNextLine().equalsIgnoreCase("y")) return null;
 

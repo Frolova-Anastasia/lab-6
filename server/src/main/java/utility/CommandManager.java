@@ -19,6 +19,7 @@ public class CommandManager {
         registerCommand(new ShowCommand(collectionManager));
         registerCommand(new ClearCommand(collectionManager));
         registerCommand(new CountByPriceCommand(collectionManager));
+        registerCommand(new FilterGreaterManufactureCommand(collectionManager));
     }
 
     public void registerCommand(Command command){

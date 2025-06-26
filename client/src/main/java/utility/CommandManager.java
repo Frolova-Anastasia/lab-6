@@ -16,6 +16,7 @@ public class CommandManager {
         register(new ExitCommand());
         register(new ClearCommand(sender));
         register(new CountByPriceCommand(sender));
+        register(new FilterGreaterManufacturerCommand(sender, builder));
     }
 
     private void register(ClientCommand command) {
