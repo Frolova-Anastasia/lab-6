@@ -85,4 +85,21 @@
             <type>TRUST</type>
         </manufacturer>
     </product>
+    <product>
+        <id>6</id>
+        <name>pizza</name>
+        <coordinates>
+            <x>78</x>
+            <y>56</y>
+        </coordinates>
+        <creationDate>2025-06-26T17:21:30.1518832+03:00</creationDate>
+        <price>5667.9</price>
+        <unitOfMeasure>GRAMS</unitOfMeasure>
+        <manufacturer>
+            <id>47</id>
+            <name>DO</name>
+            <fullName>DODO</fullName>
+            <type>COMMERCIAL</type>
+        </manufacturer>
+    </product>
 </products>

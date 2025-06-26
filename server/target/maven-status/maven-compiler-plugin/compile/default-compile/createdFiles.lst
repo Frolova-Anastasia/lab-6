@@ -1,4 +1,5 @@
 utility\CommandManager.class
+commands\ShowCommand.class
 Server.class
 utility\ProductFinalizer.class
 commands\Command.class

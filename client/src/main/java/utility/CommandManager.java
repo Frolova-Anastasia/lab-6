@@ -3,6 +3,7 @@ package utility;
 import commands.AddCommand;
 import commands.ClientCommand;
 import commands.HelpCommand;
+import commands.ShowCommand;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,6 +15,7 @@ public class CommandManager {
     public CommandManager(CommandSender sender, ProductBuilder builder) {
         register(new HelpCommand(sender));
         register(new AddCommand(sender, builder));
+        register(new ShowCommand(sender));
     }
 
     private void register(ClientCommand command) {

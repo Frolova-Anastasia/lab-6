@@ -4,6 +4,7 @@ Client.class
 commands\NumberArgsChecker.class
 utility\ProductBuilder.class
 utility\CommandManager.class
+commands\ShowCommand.class
 utility\ClientConsole.class
 commands\AddCommand.class
 commands\HelpCommand.class

@@ -3,6 +3,7 @@ package utility;
 import commands.AddCommand;
 import commands.Command;
 import commands.HelpCommand;
+import commands.ShowCommand;
 
 import java.util.*;
 
@@ -18,6 +19,7 @@ public class CommandManager {
     private void registerAll(){
         registerCommand(new HelpCommand(commands));
         registerCommand(new AddCommand(collectionManager));
+        registerCommand(new ShowCommand(collectionManager));
     }
 
     public void registerCommand(Command command){
