@@ -6,5 +6,6 @@ utility\ProductBuilder.class
 utility\CommandManager.class
 commands\ShowCommand.class
 utility\ClientConsole.class
+commands\ExitCommand.class
 commands\AddCommand.class
 commands\HelpCommand.class
