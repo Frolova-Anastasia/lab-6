@@ -1,0 +1,8 @@
+utility\CommandManager.class
+Server.class
+utility\ProductFinalizer.class
+commands\Command.class
+utility\CollectionManager.class
+commands\AddCommand.class
+commands\HelpCommand.class
+utility\FileManager.class

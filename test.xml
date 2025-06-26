@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<products>
+    <product>
+        <id>1</id>
+        <name>Пример продукт</name>
+        <coordinates>
+            <x>10</x>
+            <y>20</y>
+        </coordinates>
+        <creationDate>2023-06-25T10:15:30+03:00</creationDate>
+        <price>100.0</price>
+        <unitOfMeasure>GRAMS</unitOfMeasure>
+        <manufacturer>
+            <id>1</id>
+            <name>Производитель 1</name>
+            <fullName>ООО Пример Производства</fullName>
+            <type>COMMERCIAL</type>
+        </manufacturer>
+    </product>
+    <product>
+        <id>2</id>
+        <name>Тестовый продукт</name>
+        <coordinates>
+            <x>100</x>
+            <y>50</y>
+        </coordinates>
+        <creationDate>2023-12-01T08:00:00+03:00</creationDate>
+        <price>250.5</price>
+        <unitOfMeasure>METERS</unitOfMeasure>
+        <manufacturer>
+            <id>2</id>
+            <name>Компания 2</name>
+            <fullName>АО Второй Производитель</fullName>
+            <type>TRUST</type>
+        </manufacturer>
+    </product>
+    <product>
+        <id>3</id>
+        <name>add</name>
+        <coordinates>
+            <x>577</x>
+            <y>6789</y>
+        </coordinates>
+        <creationDate>2025-06-26T14:44:05.3304055+03:00</creationDate>
+        <price>45.0</price>
+        <unitOfMeasure>GRAMS</unitOfMeasure>
+        <manufacturer>
+            <id>3</id>
+            <name>Cool</name>
+            <fullName>CoolORG</fullName>
+            <type>GOVERNMENT</type>
+        </manufacturer>
+    </product>
+    <product>
+        <id>4</id>
+        <name>juice</name>
+        <coordinates>
+            <x>4</x>
+            <y>4</y>
+        </coordinates>
+        <creationDate>2025-06-26T14:46:27.8155435+03:00</creationDate>
+        <price>243.0</price>
+        <unitOfMeasure>SQUARE_METERS</unitOfMeasure>
+        <manufacturer>
+            <id>45</id>
+            <name>ss</name>
+            <fullName>SSSS</fullName>
+            <type>PRIVATE_LIMITED_COMPANY</type>
+        </manufacturer>
+    </product>
+    <product>
+        <id>5</id>
+        <name>tea</name>
+        <coordinates>
+            <x>666</x>
+            <y>666</y>
+        </coordinates>
+        <creationDate>2025-06-26T14:50:12.5306655+03:00</creationDate>
+        <price>666666.6</price>
+        <unitOfMeasure>GRAMS</unitOfMeasure>
+        <manufacturer>
+            <id>46</id>
+            <name>TEA</name>
+            <fullName>TEACOOLCOMPANY</fullName>
+            <type>TRUST</type>
+        </manufacturer>
+    </product>
+</products>

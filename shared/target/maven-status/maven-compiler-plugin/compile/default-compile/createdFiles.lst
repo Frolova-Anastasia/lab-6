@@ -1,0 +1,16 @@
+responses\HelpResponse.class
+data\Organization.class
+data\Product.class
+utility\IdManager.class
+utility\CommandWrapper.class
+responses\ErrorResponse.class
+exceptions\EndInputException.class
+data\OrganizationType.class
+data\Products.class
+exceptions\WrongNumberOfArgsException.class
+data\UnitOfMeasure.class
+data\ZonedDateTimeAdapter.class
+responses\SuccessResponse.class
+responses\Response.class
+requests\Request.class
+data\Coordinates.class

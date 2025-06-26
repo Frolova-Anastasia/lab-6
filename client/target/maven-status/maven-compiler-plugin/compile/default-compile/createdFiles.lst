@@ -1,0 +1,9 @@
+commands\ClientCommand.class
+utility\CommandSender.class
+Client.class
+commands\NumberArgsChecker.class
+utility\ProductBuilder.class
+utility\CommandManager.class
+utility\ClientConsole.class
+commands\AddCommand.class
+commands\HelpCommand.class
