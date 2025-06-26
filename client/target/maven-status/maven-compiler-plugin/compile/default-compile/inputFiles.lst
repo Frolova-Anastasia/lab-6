@@ -1,6 +1,9 @@
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\Client.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\AddCommand.java
+C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\ClearCommand.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\ClientCommand.java
+C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\CountByPriceCommand.java
+C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\ExitCommand.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\HelpCommand.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\NumberArgsChecker.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\ShowCommand.java

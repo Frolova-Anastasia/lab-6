@@ -45,4 +45,11 @@ public class IdManager implements Serializable {
         return nextOrgId++;
     }
 
+    public static void clear(){
+        usedOrgs.clear();
+        usedProducts.clear();
+        nextOrgId = 1;
+        nextProductId = 1;
+    }
+
 }

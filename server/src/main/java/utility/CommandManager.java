@@ -1,9 +1,6 @@
 package utility;
 
-import commands.AddCommand;
-import commands.Command;
-import commands.HelpCommand;
-import commands.ShowCommand;
+import commands.*;
 
 import java.util.*;
 
@@ -20,6 +17,8 @@ public class CommandManager {
         registerCommand(new HelpCommand(commands));
         registerCommand(new AddCommand(collectionManager));
         registerCommand(new ShowCommand(collectionManager));
+        registerCommand(new ClearCommand(collectionManager));
+        registerCommand(new CountByPriceCommand(collectionManager));
     }
 
     public void registerCommand(Command command){

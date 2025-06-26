@@ -1,3 +1,4 @@
+commands\CountByPriceCommand.class
 utility\CommandManager.class
 commands\ShowCommand.class
 Server.class
@@ -7,3 +8,4 @@ utility\CollectionManager.class
 commands\AddCommand.class
 commands\HelpCommand.class
 utility\FileManager.class
+commands\ClearCommand.class

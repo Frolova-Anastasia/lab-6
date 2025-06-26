@@ -23,6 +23,11 @@ public class CollectionManager {
         products.add(product);
     }
 
+    public void clear(){
+        IdManager.clear();
+        products.clear();
+    }
+
     public void save() {
         Products container = new Products();
         container.setProducts(products);

@@ -1,9 +1,6 @@
 package utility;
 
-import commands.AddCommand;
-import commands.ClientCommand;
-import commands.HelpCommand;
-import commands.ShowCommand;
+import commands.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,6 +13,9 @@ public class CommandManager {
         register(new HelpCommand(sender));
         register(new AddCommand(sender, builder));
         register(new ShowCommand(sender));
+        register(new ExitCommand());
+        register(new ClearCommand(sender));
+        register(new CountByPriceCommand(sender));
     }
 
     private void register(ClientCommand command) {

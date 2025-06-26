@@ -2,19 +2,19 @@
 <products>
     <product>
         <id>1</id>
-        <name>Пример продукт</name>
+        <name>cola</name>
         <coordinates>
-            <x>10</x>
-            <y>20</y>
+            <x>67</x>
+            <y>3</y>
         </coordinates>
-        <creationDate>2023-06-25T10:15:30+03:00</creationDate>
-        <price>100.0</price>
+        <creationDate>2025-06-26T22:22:29.7672305+03:00</creationDate>
+        <price>23.3</price>
         <unitOfMeasure>GRAMS</unitOfMeasure>
         <manufacturer>
             <id>1</id>
-            <name>Производитель 1</name>
-            <fullName>ООО Пример Производства</fullName>
-            <type>COMMERCIAL</type>
+            <name>COCA_COLA</name>
+            <fullName>COCA_COLA_COM{ANY</fullName>
+            <type>TRUST</type>
         </manufacturer>
     </product>
     <product>
@@ -25,7 +25,7 @@
             <y>50</y>
         </coordinates>
         <creationDate>2023-12-01T08:00:00+03:00</creationDate>
-        <price>250.5</price>
+        <price>23.3</price>
         <unitOfMeasure>METERS</unitOfMeasure>
         <manufacturer>
             <id>2</id>
@@ -42,7 +42,7 @@
             <y>6789</y>
         </coordinates>
         <creationDate>2025-06-26T14:44:05.3304055+03:00</creationDate>
-        <price>45.0</price>
+        <price>23.0</price>
         <unitOfMeasure>GRAMS</unitOfMeasure>
         <manufacturer>
             <id>3</id>
@@ -59,7 +59,7 @@
             <y>4</y>
         </coordinates>
         <creationDate>2025-06-26T14:46:27.8155435+03:00</creationDate>
-        <price>243.0</price>
+        <price>24.9</price>
         <unitOfMeasure>SQUARE_METERS</unitOfMeasure>
         <manufacturer>
             <id>45</id>
@@ -100,6 +100,21 @@
             <name>DO</name>
             <fullName>DODO</fullName>
             <type>COMMERCIAL</type>
+        </manufacturer>
+    </product>
+    <product>
+        <id>7</id>
+        <name>tv</name>
+        <coordinates>
+            <x>45</x>
+            <y>4</y>
+        </coordinates>
+        <creationDate>2025-06-26T22:50:22.0289202+03:00</creationDate>
+        <price>23.3</price>
+        <manufacturer>
+            <id>48</id>
+            <name>coolTV</name>
+            <fullName>COOLTVCORPORATION</fullName>
         </manufacturer>
     </product>
 </products>

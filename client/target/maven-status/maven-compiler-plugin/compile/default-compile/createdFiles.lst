@@ -1,10 +1,13 @@
 commands\ClientCommand.class
-utility\CommandSender.class
 Client.class
 commands\NumberArgsChecker.class
 utility\ProductBuilder.class
-utility\CommandManager.class
 commands\ShowCommand.class
-utility\ClientConsole.class
 commands\AddCommand.class
+commands\CountByPriceCommand.class
+utility\CommandSender.class
+utility\CommandManager.class
+utility\ClientConsole.class
+commands\ExitCommand.class
 commands\HelpCommand.class
+commands\ClearCommand.class
