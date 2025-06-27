@@ -4,11 +4,13 @@ import data.Organization;
 import data.Product;
 import data.Products;
 
+import java.time.ZonedDateTime;
 import java.util.*;
 
 public class CollectionManager {
     private final List<Product> products = new LinkedList<>();
     private final FileManager fileManager;
+    private ZonedDateTime initTime;
 
     public CollectionManager(FileManager fileManager) {
         this.fileManager = fileManager;
@@ -17,6 +19,14 @@ public class CollectionManager {
 
     public List<Product> getProducts() {
         return products;
+    }
+
+    public ZonedDateTime getInitTime(){
+        return initTime;
+    }
+
+    public String getCollectionType(){
+        return products.getClass().getSimpleName();
     }
 
     public void add(Product product){
@@ -45,7 +55,8 @@ public class CollectionManager {
                 }
             }
             validateCollection();
-            System.out.println("Коллекция загружена. Элементов: " + products.size());
+            initTime = ZonedDateTime.now();
+            System.out.println("Коллекция загружена");
         } else {
             System.out.println("Файл пустой или повреждён.");
         }

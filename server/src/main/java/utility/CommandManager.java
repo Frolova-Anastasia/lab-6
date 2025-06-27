@@ -20,6 +20,7 @@ public class CommandManager {
         registerCommand(new ClearCommand(collectionManager));
         registerCommand(new CountByPriceCommand(collectionManager));
         registerCommand(new FilterGreaterManufactureCommand(collectionManager));
+        registerCommand(new InfoCommand(collectionManager));
     }
 
     public void registerCommand(Command command){

@@ -6,6 +6,7 @@ C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\CountByPriceCom
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\ExitCommand.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\FilterGreaterManufacturerCommand.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\HelpCommand.java
+C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\InfoCommand.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\NumberArgsChecker.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\ShowCommand.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\utility\ClientConsole.java

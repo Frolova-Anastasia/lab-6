@@ -1,12 +1,13 @@
-commands\CountByPriceCommand.class
-utility\CommandManager.class
 commands\FilterGreaterManufactureCommand.class
 commands\ShowCommand.class
+commands\AddCommand.class
+utility\FileManager.class
+commands\CountByPriceCommand.class
+commands\InfoCommand.class
+utility\CommandManager.class
 Server.class
 utility\ProductFinalizer.class
 commands\Command.class
 utility\CollectionManager.class
-commands\AddCommand.class
 commands\HelpCommand.class
-utility\FileManager.class
 commands\ClearCommand.class
