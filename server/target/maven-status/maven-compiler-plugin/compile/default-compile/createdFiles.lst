@@ -1,5 +1,6 @@
 commands\CountByPriceCommand.class
 utility\CommandManager.class
+commands\FilterGreaterManufactureCommand.class
 commands\ShowCommand.class
 Server.class
 utility\ProductFinalizer.class
