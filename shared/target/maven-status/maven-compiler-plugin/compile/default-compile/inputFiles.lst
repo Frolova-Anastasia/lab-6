@@ -9,7 +9,6 @@ C:\Users\af063\Documents\lab6-mini\shared\src\main\java\exceptions\EndInputExcep
 C:\Users\af063\Documents\lab6-mini\shared\src\main\java\exceptions\WrongNumberOfArgsException.java
 C:\Users\af063\Documents\lab6-mini\shared\src\main\java\requests\Request.java
 C:\Users\af063\Documents\lab6-mini\shared\src\main\java\responses\ErrorResponse.java
-C:\Users\af063\Documents\lab6-mini\shared\src\main\java\responses\HelpResponse.java
 C:\Users\af063\Documents\lab6-mini\shared\src\main\java\responses\Response.java
 C:\Users\af063\Documents\lab6-mini\shared\src\main\java\responses\SuccessResponse.java
 C:\Users\af063\Documents\lab6-mini\shared\src\main\java\utility\CommandWrapper.java

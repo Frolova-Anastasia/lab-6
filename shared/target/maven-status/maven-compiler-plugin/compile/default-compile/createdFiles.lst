@@ -1,4 +1,3 @@
-responses\HelpResponse.class
 data\Organization.class
 data\Product.class
 utility\IdManager.class
