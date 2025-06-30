@@ -10,6 +10,7 @@ C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\InfoCommand.jav
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\InsertCommand.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\NumberArgsChecker.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\ShowCommand.java
+C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\UpdateCommand.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\utility\ClientConsole.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\utility\CommandManager.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\utility\CommandSender.java

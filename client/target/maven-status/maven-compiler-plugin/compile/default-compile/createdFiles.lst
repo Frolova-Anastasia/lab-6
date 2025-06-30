@@ -12,5 +12,6 @@ commands\InfoCommand.class
 utility\CommandManager.class
 utility\ClientConsole.class
 commands\ExitCommand.class
+commands\UpdateCommand.class
 commands\HelpCommand.class
 commands\ClearCommand.class

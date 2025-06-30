@@ -19,6 +19,7 @@ public class CommandManager {
         register(new FilterGreaterManufacturerCommand(sender, builder));
         register(new InfoCommand(sender));
         register(new InsertCommand(sender, builder));
+        register(new UpdateCommand(sender, builder));
     }
 
     private void register(ClientCommand command) {

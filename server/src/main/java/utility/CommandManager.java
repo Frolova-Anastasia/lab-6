@@ -22,6 +22,7 @@ public class CommandManager {
         registerCommand(new FilterGreaterManufactureCommand(collectionManager));
         registerCommand(new InfoCommand(collectionManager));
         registerCommand(new InsertCommand(collectionManager));
+        registerCommand(new UpdateCommand(collectionManager));
     }
 
     public void registerCommand(Command command){

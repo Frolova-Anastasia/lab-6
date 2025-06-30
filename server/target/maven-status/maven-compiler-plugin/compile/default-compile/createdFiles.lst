@@ -10,5 +10,6 @@ Server.class
 utility\ProductFinalizer.class
 commands\Command.class
 utility\CollectionManager.class
+commands\UpdateCommand.class
 commands\HelpCommand.class
 commands\ClearCommand.class

@@ -35,23 +35,6 @@
         </manufacturer>
     </product>
     <product>
-        <id>3</id>
-        <name>add</name>
-        <coordinates>
-            <x>577</x>
-            <y>6789</y>
-        </coordinates>
-        <creationDate>2025-06-26T14:44:05.3304055+03:00</creationDate>
-        <price>23.0</price>
-        <unitOfMeasure>GRAMS</unitOfMeasure>
-        <manufacturer>
-            <id>3</id>
-            <name>Cool</name>
-            <fullName>CoolORG</fullName>
-            <type>GOVERNMENT</type>
-        </manufacturer>
-    </product>
-    <product>
         <id>4</id>
         <name>juice</name>
         <coordinates>
@@ -103,6 +86,16 @@
         </manufacturer>
     </product>
     <product>
+        <id>11</id>
+        <name>water</name>
+        <coordinates>
+            <x>34</x>
+            <y>3</y>
+        </coordinates>
+        <creationDate>2025-07-01T00:34:40.8182009+03:00</creationDate>
+        <price>234.0</price>
+    </product>
+    <product>
         <id>8</id>
         <name>milk</name>
         <coordinates>
@@ -149,6 +142,23 @@
             <id>48</id>
             <name>coolTV</name>
             <fullName>COOLTVCORPORATION</fullName>
+        </manufacturer>
+    </product>
+    <product>
+        <id>10</id>
+        <name>you</name>
+        <coordinates>
+            <x>6</x>
+            <y>3</y>
+        </coordinates>
+        <creationDate>2025-07-01T00:32:36.9923624+03:00</creationDate>
+        <price>45.6</price>
+        <unitOfMeasure>CENTIMETERS</unitOfMeasure>
+        <manufacturer>
+            <id>51</id>
+            <name>mafiaCorp</name>
+            <fullName>mafiaCorporation</fullName>
+            <type>GOVERNMENT</type>
         </manufacturer>
     </product>
 </products>
