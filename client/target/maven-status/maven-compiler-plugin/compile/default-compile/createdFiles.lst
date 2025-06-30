@@ -5,6 +5,7 @@ utility\ProductBuilder.class
 commands\ShowCommand.class
 commands\FilterGreaterManufacturerCommand.class
 commands\AddCommand.class
+commands\InsertCommand.class
 commands\CountByPriceCommand.class
 utility\CommandSender.class
 commands\InfoCommand.class

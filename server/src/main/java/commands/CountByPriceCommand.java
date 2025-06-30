@@ -24,7 +24,7 @@ public class CountByPriceCommand implements Command{
 
     @Override
     public String getDescription() {
-        return "выводит количество элементов, значение поля price которых равно заданному";
+        return "выводит количество элементов, значение поля price которых равно заданному (count_by_price {price})";
     }
 
     @Override

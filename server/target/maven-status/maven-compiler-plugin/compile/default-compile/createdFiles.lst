@@ -2,6 +2,7 @@ commands\FilterGreaterManufactureCommand.class
 commands\ShowCommand.class
 commands\AddCommand.class
 utility\FileManager.class
+commands\InsertCommand.class
 commands\CountByPriceCommand.class
 commands\InfoCommand.class
 utility\CommandManager.class

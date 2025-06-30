@@ -103,6 +103,40 @@
         </manufacturer>
     </product>
     <product>
+        <id>8</id>
+        <name>milk</name>
+        <coordinates>
+            <x>5</x>
+            <y>3</y>
+        </coordinates>
+        <creationDate>2025-06-30T21:51:34.7662159+03:00</creationDate>
+        <price>23.3</price>
+        <unitOfMeasure>GRAMS</unitOfMeasure>
+        <manufacturer>
+            <id>49</id>
+            <name>milkCorp</name>
+            <fullName>milkCorporation</fullName>
+            <type>COMMERCIAL</type>
+        </manufacturer>
+    </product>
+    <product>
+        <id>9</id>
+        <name>cheese</name>
+        <coordinates>
+            <x>9</x>
+            <y>8</y>
+        </coordinates>
+        <creationDate>2025-06-30T21:52:12.1570232+03:00</creationDate>
+        <price>56.0</price>
+        <unitOfMeasure>GRAMS</unitOfMeasure>
+        <manufacturer>
+            <id>50</id>
+            <name>milk</name>
+            <fullName>milkCorporation</fullName>
+            <type>COMMERCIAL</type>
+        </manufacturer>
+    </product>
+    <product>
         <id>7</id>
         <name>tv</name>
         <coordinates>
