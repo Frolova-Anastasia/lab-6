@@ -84,6 +84,23 @@
         </manufacturer>
     </product>
     <product>
+        <id>18</id>
+        <name>water</name>
+        <coordinates>
+            <x>567</x>
+            <y>45</y>
+        </coordinates>
+        <creationDate>2025-07-02T00:21:38.2302668+03:00</creationDate>
+        <price>23.3</price>
+        <unitOfMeasure>GRAMS</unitOfMeasure>
+        <manufacturer>
+            <id>57</id>
+            <name>Ocean</name>
+            <fullName>OceanCorp</fullName>
+            <type>TRUST</type>
+        </manufacturer>
+    </product>
+    <product>
         <id>3</id>
         <name>chocolate</name>
         <coordinates>
@@ -159,6 +176,90 @@
             <name>BreadCorp</name>
             <fullName>BreadCorporation</fullName>
             <type>GOVERNMENT</type>
+        </manufacturer>
+    </product>
+    <product>
+        <id>13</id>
+        <name>help</name>
+        <coordinates>
+            <x>120</x>
+            <y>300</y>
+        </coordinates>
+        <creationDate>2025-07-01T21:55:26.4623691+03:00</creationDate>
+        <price>29999.99</price>
+        <unitOfMeasure>SQUARE_METERS</unitOfMeasure>
+        <manufacturer>
+            <id>52</id>
+            <name>Samsung</name>
+            <fullName>Samsung Electronics</fullName>
+            <type>COMMERCIAL</type>
+        </manufacturer>
+    </product>
+    <product>
+        <id>14</id>
+        <name>TV Samsong</name>
+        <coordinates>
+            <x>65</x>
+            <y>76</y>
+        </coordinates>
+        <creationDate>2025-07-01T22:02:05.922217+03:00</creationDate>
+        <price>23456.65</price>
+        <manufacturer>
+            <id>53</id>
+            <name>Sumsung</name>
+            <fullName>SamsungCorp</fullName>
+            <type>COMMERCIAL</type>
+        </manufacturer>
+    </product>
+    <product>
+        <id>15</id>
+        <name>help</name>
+        <coordinates>
+            <x>120</x>
+            <y>300</y>
+        </coordinates>
+        <creationDate>2025-07-01T22:02:21.5866043+03:00</creationDate>
+        <price>29999.99</price>
+        <unitOfMeasure>SQUARE_METERS</unitOfMeasure>
+        <manufacturer>
+            <id>54</id>
+            <name>Samsung</name>
+            <fullName>Samsung Electronics</fullName>
+            <type>COMMERCIAL</type>
+        </manufacturer>
+    </product>
+    <product>
+        <id>16</id>
+        <name>Samsung TV</name>
+        <coordinates>
+            <x>120</x>
+            <y>300</y>
+        </coordinates>
+        <creationDate>2025-07-02T00:12:33.7732801+03:00</creationDate>
+        <price>29999.99</price>
+        <unitOfMeasure>SQUARE_METERS</unitOfMeasure>
+        <manufacturer>
+            <id>55</id>
+            <name>Samsung</name>
+            <fullName>Samsung Electronics</fullName>
+            <type>COMMERCIAL</type>
+        </manufacturer>
+    </product>
+    <product>
+        <id>17</id>
+        <name>Samsung TV</name>
+        <coordinates>
+            <x>684</x>
+            <y>300</y>
+        </coordinates>
+        <creationDate>2025-07-02T00:19:12.9743286+03:00</creationDate>
+        <price>29.9</price>
+        <unitOfMeasure>METERS</unitOfMeasure>
+        <manufacturer>
+            <id>56</id>
+            <name>Samsung</name>
+            <fullName>Samsung Electronics</fullName>
+            <type>COMMERCIAL</type>
         </manufacturer>
     </product>
 </products>

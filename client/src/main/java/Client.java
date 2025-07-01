@@ -1,10 +1,8 @@
-import utility.ClientConsole;
-import utility.CommandManager;
-import utility.CommandSender;
-import utility.ProductBuilder;
+import utility.*;
 
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.util.NoSuchElementException;
 
 public class Client {
 
@@ -15,10 +13,13 @@ public class Client {
             DatagramSocket socket = new DatagramSocket();
 
             CommandSender sender = new CommandSender(socket, serverAddress, serverPort);
-            ProductBuilder builder = new ProductBuilder();
-            CommandManager commandManager = new CommandManager(sender, builder);
+            InputProvider consoleInput = new ConsoleInputProvider();
+            ProductBuilder builder = new ProductBuilder(consoleInput);
+            CommandManager commandManager = new CommandManager();
 
-            ClientConsole console = new ClientConsole(commandManager);
+            ClientConsole console = new ClientConsole(commandManager, builder);
+
+            commandManager.initCommands(sender, builder, console);
 
             System.out.println("Клиент запущен. Введите команду: ");
 

@@ -9,7 +9,10 @@ import java.util.Map;
 public class CommandManager {
     private final Map<String, ClientCommand> commandMap = new HashMap<>();
 
-    public CommandManager(CommandSender sender, ProductBuilder builder) {
+    public CommandManager() {
+    }
+
+    public void initCommands(CommandSender sender, ProductBuilder builder, ClientConsole console){
         register(new HelpCommand(sender));
         register(new AddCommand(sender, builder));
         register(new ShowCommand(sender));
@@ -24,6 +27,7 @@ public class CommandManager {
         register(new RemoveCommand(sender));
         register(new RemoveGreaterCommand(sender, builder));
         register(new ShuffleCommand(sender));
+        register(new ExecuteScriptCommand(this, console));
     }
 
     private void register(ClientCommand command) {

@@ -2,28 +2,30 @@ package utility;
 
 import commands.ClientCommand;
 import exceptions.EndInputException;
-import exceptions.WrongNumberOfArgsException;
 import responses.Response;
 
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
-import java.util.Scanner;
 
 public class ClientConsole {
-    private final Scanner scanner = new Scanner(System.in);
+    private InputProvider inputProvider;
     private final CommandManager commandManager;
+    private final ProductBuilder productBuilder;
 
-    public ClientConsole(CommandManager commandManager) {
+    public ClientConsole(CommandManager commandManager, ProductBuilder productBuilder) {
         this.commandManager = commandManager;
+        this.productBuilder = productBuilder;
+        this.inputProvider = new ConsoleInputProvider();
     }
 
-    public void run() throws WrongNumberOfArgsException, IOException, EndInputException {
+    public void run()  {
         while (true) {
             System.out.print("> ");
             String line;
             try {
-                line = scanner.nextLine().trim();
+                line = inputProvider.nextLine().trim();
             } catch (NoSuchElementException e) {
                 System.out.println("Ввод прерван");
                 break;
@@ -40,7 +42,9 @@ public class ClientConsole {
             }
             try {
                 Response response = command.execute(args);
-                System.out.println(response.getMessage());
+                if (response != null) {
+                    System.out.println(response.getMessage());
+                }
             } catch (EndInputException e) {
                 System.out.println("Ввод прерван пользователем");
                 break;
@@ -48,5 +52,25 @@ public class ClientConsole {
                 System.out.println(e.getMessage());
             }
         }
+    }
+
+    public void runScript() throws IOException, EndInputException {
+        try {
+            run(); // запустить стандартную обработку
+        } finally {
+            resetInputMode(); // вернуть ввод в консоль после выполнения
+        }
+    }
+
+    // Включение скриптового режима
+    public void setScriptInputMode(Path path) throws IOException {
+        this.inputProvider = new FileInputProvider(path);
+        productBuilder.setInputProvider(this.inputProvider);
+    }
+
+    // Возврат в консольный режим
+    public void resetInputMode() {
+        this.inputProvider = new ConsoleInputProvider();
+        productBuilder.setInputProvider(this.inputProvider);
     }
 }

@@ -31,6 +31,6 @@ public class HelpCommand implements Command{
         for(Command c : commands.values()){
             responseText.append(c.getName()).append(" - ").append(c.getDescription()).append("\n");
         }
-        return new SuccessResponse(responseText.append("exit - завершение работы").toString());
+        return new SuccessResponse(responseText.append("exit - завершение работы \n").append("execute_script - выполнить команды из указанного файла").toString());
     }
 }

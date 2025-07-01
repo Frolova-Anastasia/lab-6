@@ -10,59 +10,70 @@ import java.util.function.IntPredicate;
 
 public class ProductBuilder {
     private final Scanner scanner = new Scanner(System.in);
+    private InputProvider inputProvider;
 
-    public ProductBuilder() {
+    public ProductBuilder(InputProvider inputProvider) {
+        this.inputProvider = inputProvider;
+    }
+
+    public void setInputProvider(InputProvider provider) {
+        this.inputProvider = provider;
     }
 
     public Product builProduct() throws EndInputException {
+        try {
         String name = askNonEmptyString("Введите название товара: ");
         Coordinates coordinates = buildCoordinates();
         Float price = askNullPositiveFloat("Введите цену: ");
         UnitOfMeasure unitOfMeasure = askEnum(UnitOfMeasure.class, "введите единицу измерения: ");
         Organization organization = buildOrganization();
         return new Product(null, name, coordinates, price, unitOfMeasure, organization, null);
+        }catch (NoSuchElementException e){
+            throw new EndInputException("Неожиданное завершение ввода");
+        }
     }
 
     private Coordinates buildCoordinates() throws EndInputException {
+        try {
         int x = askInt("Введите координату x(<=931)", value -> value <= 931);
         Long y = askNonNullLong("Введите координату y: ");
         return new Coordinates(x, y);
+        }catch (NoSuchElementException e){
+            throw new EndInputException("Неожиданное завершение ввода");
+        }
     }
 
     public Organization buildOrganization() throws EndInputException {
+        try {
         System.out.print("Добавить организацию-производителя?(y/n): ");
-        if (!safeNextLine().equalsIgnoreCase("y")) return null;
+        if (!inputProvider.nextLine().trim().equalsIgnoreCase("y")) return null;
 
         String name = askNonEmptyString("Введите название организации: ");
         String fullName = askNonEmptyString("Введите полное название организации: ");
         OrganizationType type = askEnum(OrganizationType.class, "Введите тип организации(или оставьте пустым: ");
 
         return new Organization(name, fullName, type, null);
-    }
-
-
-    private String safeNextLine() throws EndInputException {
-        try {
-            return scanner.nextLine().trim();
-        } catch (NoSuchElementException e) {
-            throw new EndInputException();
+        }catch (NoSuchElementException e){
+            throw new EndInputException("Неожиданное завершение ввода");
         }
     }
 
-    private String askNonEmptyString(String text) throws EndInputException {
+
+
+    private String askNonEmptyString(String text) {
         while (true) {
             System.out.println(text);
-            String input = safeNextLine();
+            String input = inputProvider.nextLine().trim();
             if (!input.isEmpty()) return input;
             System.out.println("Поле не может быть пустым");
         }
     }
 
-    private int askInt(String text, IntPredicate validator) throws EndInputException {
+    private int askInt(String text, IntPredicate validator){
         while (true) {
             System.out.println(text);
             try {
-                int input = Integer.parseInt(safeNextLine());
+                int input = Integer.parseInt(inputProvider.nextLine().trim());
                 if (validator.test(input)) return input;
             } catch (NumberFormatException e) {
                 System.out.println("Некорректный ввод. Введите целое число");
@@ -70,20 +81,20 @@ public class ProductBuilder {
         }
     }
 
-    private Long askNonNullLong(String text) throws EndInputException {
+    private Long askNonNullLong(String text){
         while (true) {
             System.out.println(text);
             try {
-                return Long.parseLong(safeNextLine());
+                return Long.parseLong(inputProvider.nextLine().trim());
             } catch (NumberFormatException e) {
                 System.out.println("Поле не может быть пустым и является целым числом");
             }
         }
     }
 
-    private Float askNullPositiveFloat(String text) throws EndInputException {
+    private Float askNullPositiveFloat(String text){
         System.out.println(text);
-        String input = safeNextLine();
+        String input = inputProvider.nextLine().trim();
         try {
             float val = Float.parseFloat(input);
             return (val > 0) ? val : null;
@@ -92,11 +103,11 @@ public class ProductBuilder {
         }
     }
 
-    private <E extends Enum<E>> E askEnum(Class<E> enumClass, String text) throws EndInputException {
+    private <E extends Enum<E>> E askEnum(Class<E> enumClass, String text)  {
         while (true) {
             System.out.print(text + " ");
             for (E constant : enumClass.getEnumConstants()) System.out.println(constant);
-            String input = safeNextLine();
+            String input = inputProvider.nextLine().trim();
             if (input.isEmpty()) return null;
             try {
                 return Enum.valueOf(enumClass, input.toUpperCase());

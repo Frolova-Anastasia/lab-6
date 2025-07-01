@@ -47,7 +47,9 @@ public class UpdateCommand implements Command{
             if(exist == null){
                 return new ErrorResponse("Продукт с ID " + id + " не найден");
             }
-            ProductFinalizer.finalize(newProduct);
+
+            newProduct.setId(id);
+            newProduct.setCreationDate(exist.getCreationDate());
 
             collectionManager.getProducts().remove(exist);
             collectionManager.getProducts().add(newProduct);

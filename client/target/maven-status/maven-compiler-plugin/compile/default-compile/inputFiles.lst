@@ -3,6 +3,7 @@ C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\AddCommand.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\ClearCommand.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\ClientCommand.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\CountByPriceCommand.java
+C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\ExecuteScriptCommand.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\ExitCommand.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\FilterGreaterManufacturerCommand.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\HelpCommand.java
@@ -18,4 +19,7 @@ C:\Users\af063\Documents\lab6-mini\client\src\main\java\commands\UpdateCommand.j
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\utility\ClientConsole.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\utility\CommandManager.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\utility\CommandSender.java
+C:\Users\af063\Documents\lab6-mini\client\src\main\java\utility\ConsoleInputProvider.java
+C:\Users\af063\Documents\lab6-mini\client\src\main\java\utility\FileInputProvider.java
+C:\Users\af063\Documents\lab6-mini\client\src\main\java\utility\InputProvider.java
 C:\Users\af063\Documents\lab6-mini\client\src\main\java\utility\ProductBuilder.java
