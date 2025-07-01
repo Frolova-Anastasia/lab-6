@@ -23,6 +23,10 @@ public class CommandManager {
         registerCommand(new InfoCommand(collectionManager));
         registerCommand(new InsertCommand(collectionManager));
         registerCommand(new UpdateCommand(collectionManager));
+        registerCommand(new PrintUniqueManufacturer(collectionManager));
+        registerCommand(new RemoveCommand(collectionManager));
+        registerCommand(new RemoveGreaterCommand(collectionManager));
+        registerCommand(new ShuffleCommand(collectionManager));
     }
 
     public void registerCommand(Command command){

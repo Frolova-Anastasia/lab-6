@@ -20,6 +20,10 @@ public class CommandManager {
         register(new InfoCommand(sender));
         register(new InsertCommand(sender, builder));
         register(new UpdateCommand(sender, builder));
+        register(new PrintUniqueManufacturer(sender));
+        register(new RemoveCommand(sender));
+        register(new RemoveGreaterCommand(sender, builder));
+        register(new ShuffleCommand(sender));
     }
 
     private void register(ClientCommand command) {

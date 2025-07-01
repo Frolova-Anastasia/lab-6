@@ -6,12 +6,16 @@ commands\ShowCommand.class
 commands\FilterGreaterManufacturerCommand.class
 commands\AddCommand.class
 commands\InsertCommand.class
+commands\PrintUniqueManufacturer.class
 commands\CountByPriceCommand.class
 utility\CommandSender.class
 commands\InfoCommand.class
 utility\CommandManager.class
+commands\RemoveCommand.class
 utility\ClientConsole.class
 commands\ExitCommand.class
+commands\RemoveGreaterCommand.class
+commands\ShuffleCommand.class
 commands\UpdateCommand.class
 commands\HelpCommand.class
 commands\ClearCommand.class

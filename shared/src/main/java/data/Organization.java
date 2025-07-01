@@ -82,13 +82,16 @@ public class Organization implements Comparable<Organization>, Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Organization that = (Organization) o;
-        return id == that.id;
+        return Objects.equals(name, that.name) &&
+                Objects.equals(fullName, that.fullName) &&
+                type == that.type;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(name, fullName, type);
     }
+
 
     @Override
     public String toString() {

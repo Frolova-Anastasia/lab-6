@@ -1,71 +1,37 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <products>
     <product>
-        <id>1</id>
-        <name>cola</name>
+        <id>8</id>
+        <name>milk</name>
         <coordinates>
-            <x>67</x>
+            <x>5</x>
             <y>3</y>
         </coordinates>
-        <creationDate>2025-06-26T22:22:29.7672305+03:00</creationDate>
+        <creationDate>2025-06-30T21:51:34.7662159+03:00</creationDate>
         <price>23.3</price>
         <unitOfMeasure>GRAMS</unitOfMeasure>
         <manufacturer>
-            <id>1</id>
-            <name>COCA_COLA</name>
-            <fullName>COCA_COLA_COM{ANY</fullName>
-            <type>TRUST</type>
+            <id>49</id>
+            <name>milkCorp</name>
+            <fullName>milkCorporation</fullName>
+            <type>COMMERCIAL</type>
         </manufacturer>
     </product>
     <product>
-        <id>2</id>
-        <name>Тестовый продукт</name>
+        <id>10</id>
+        <name>you</name>
         <coordinates>
-            <x>100</x>
-            <y>50</y>
+            <x>6</x>
+            <y>3</y>
         </coordinates>
-        <creationDate>2023-12-01T08:00:00+03:00</creationDate>
-        <price>23.3</price>
-        <unitOfMeasure>METERS</unitOfMeasure>
+        <creationDate>2025-07-01T00:32:36.9923624+03:00</creationDate>
+        <price>45.6</price>
+        <unitOfMeasure>CENTIMETERS</unitOfMeasure>
         <manufacturer>
-            <id>2</id>
-            <name>Компания 2</name>
-            <fullName>АО Второй Производитель</fullName>
-            <type>TRUST</type>
-        </manufacturer>
-    </product>
-    <product>
-        <id>4</id>
-        <name>juice</name>
-        <coordinates>
-            <x>4</x>
-            <y>4</y>
-        </coordinates>
-        <creationDate>2025-06-26T14:46:27.8155435+03:00</creationDate>
-        <price>24.9</price>
-        <unitOfMeasure>SQUARE_METERS</unitOfMeasure>
-        <manufacturer>
-            <id>45</id>
-            <name>ss</name>
-            <fullName>SSSS</fullName>
-            <type>PRIVATE_LIMITED_COMPANY</type>
-        </manufacturer>
-    </product>
-    <product>
-        <id>5</id>
-        <name>tea</name>
-        <coordinates>
-            <x>666</x>
-            <y>666</y>
-        </coordinates>
-        <creationDate>2025-06-26T14:50:12.5306655+03:00</creationDate>
-        <price>666666.6</price>
-        <unitOfMeasure>GRAMS</unitOfMeasure>
-        <manufacturer>
-            <id>46</id>
-            <name>TEA</name>
-            <fullName>TEACOOLCOMPANY</fullName>
-            <type>TRUST</type>
+            <id>51</id>
+            <name>mafiaCorp</name>
+            <fullName>mafiaCorporation</fullName>
+            <type>GOVERNMENT</type>
         </manufacturer>
     </product>
     <product>
@@ -82,33 +48,6 @@
             <id>47</id>
             <name>DO</name>
             <fullName>DODO</fullName>
-            <type>COMMERCIAL</type>
-        </manufacturer>
-    </product>
-    <product>
-        <id>11</id>
-        <name>water</name>
-        <coordinates>
-            <x>34</x>
-            <y>3</y>
-        </coordinates>
-        <creationDate>2025-07-01T00:34:40.8182009+03:00</creationDate>
-        <price>234.0</price>
-    </product>
-    <product>
-        <id>8</id>
-        <name>milk</name>
-        <coordinates>
-            <x>5</x>
-            <y>3</y>
-        </coordinates>
-        <creationDate>2025-06-30T21:51:34.7662159+03:00</creationDate>
-        <price>23.3</price>
-        <unitOfMeasure>GRAMS</unitOfMeasure>
-        <manufacturer>
-            <id>49</id>
-            <name>milkCorp</name>
-            <fullName>milkCorporation</fullName>
             <type>COMMERCIAL</type>
         </manufacturer>
     </product>
@@ -145,19 +84,80 @@
         </manufacturer>
     </product>
     <product>
-        <id>10</id>
-        <name>you</name>
+        <id>3</id>
+        <name>chocolate</name>
         <coordinates>
-            <x>6</x>
+            <x>679</x>
             <y>3</y>
         </coordinates>
-        <creationDate>2025-07-01T00:32:36.9923624+03:00</creationDate>
-        <price>45.6</price>
-        <unitOfMeasure>CENTIMETERS</unitOfMeasure>
+        <creationDate>2025-07-01T12:48:34.1645257+03:00</creationDate>
+        <price>245.7</price>
+        <unitOfMeasure>GRAMS</unitOfMeasure>
         <manufacturer>
-            <id>51</id>
-            <name>mafiaCorp</name>
-            <fullName>mafiaCorporation</fullName>
+            <id>3</id>
+            <name>Dove</name>
+            <fullName>DoveSoapCorporation</fullName>
+            <type>COMMERCIAL</type>
+        </manufacturer>
+    </product>
+    <product>
+        <id>2</id>
+        <name>pizza</name>
+        <coordinates>
+            <x>2</x>
+            <y>4</y>
+        </coordinates>
+        <creationDate>2025-07-01T12:47:56.6350527+03:00</creationDate>
+        <price>56.0</price>
+        <unitOfMeasure>GRAMS</unitOfMeasure>
+        <manufacturer>
+            <id>2</id>
+            <name>DODO</name>
+            <fullName>DODOPIZZA</fullName>
+            <type>COMMERCIAL</type>
+        </manufacturer>
+    </product>
+    <product>
+        <id>11</id>
+        <name>water</name>
+        <coordinates>
+            <x>34</x>
+            <y>3</y>
+        </coordinates>
+        <creationDate>2025-07-01T00:34:40.8182009+03:00</creationDate>
+        <price>234.0</price>
+    </product>
+    <product>
+        <id>5</id>
+        <name>tea</name>
+        <coordinates>
+            <x>666</x>
+            <y>666</y>
+        </coordinates>
+        <creationDate>2025-06-26T14:50:12.5306655+03:00</creationDate>
+        <price>666666.6</price>
+        <unitOfMeasure>GRAMS</unitOfMeasure>
+        <manufacturer>
+            <id>46</id>
+            <name>TEA</name>
+            <fullName>TEACOOLCOMPANY</fullName>
+            <type>TRUST</type>
+        </manufacturer>
+    </product>
+    <product>
+        <id>1</id>
+        <name>bread</name>
+        <coordinates>
+            <x>767</x>
+            <y>65</y>
+        </coordinates>
+        <creationDate>2025-07-01T12:46:34.3890194+03:00</creationDate>
+        <price>765.0</price>
+        <unitOfMeasure>GRAMS</unitOfMeasure>
+        <manufacturer>
+            <id>1</id>
+            <name>BreadCorp</name>
+            <fullName>BreadCorporation</fullName>
             <type>GOVERNMENT</type>
         </manufacturer>
     </product>

@@ -6,7 +6,11 @@ C:\Users\af063\Documents\lab6-mini\server\src\main\java\commands\FilterGreaterMa
 C:\Users\af063\Documents\lab6-mini\server\src\main\java\commands\HelpCommand.java
 C:\Users\af063\Documents\lab6-mini\server\src\main\java\commands\InfoCommand.java
 C:\Users\af063\Documents\lab6-mini\server\src\main\java\commands\InsertCommand.java
+C:\Users\af063\Documents\lab6-mini\server\src\main\java\commands\PrintUniqueManufacturer.java
+C:\Users\af063\Documents\lab6-mini\server\src\main\java\commands\RemoveCommand.java
+C:\Users\af063\Documents\lab6-mini\server\src\main\java\commands\RemoveGreaterCommand.java
 C:\Users\af063\Documents\lab6-mini\server\src\main\java\commands\ShowCommand.java
+C:\Users\af063\Documents\lab6-mini\server\src\main\java\commands\ShuffleCommand.java
 C:\Users\af063\Documents\lab6-mini\server\src\main\java\commands\UpdateCommand.java
 C:\Users\af063\Documents\lab6-mini\server\src\main\java\Server.java
 C:\Users\af063\Documents\lab6-mini\server\src\main\java\utility\CollectionManager.java
