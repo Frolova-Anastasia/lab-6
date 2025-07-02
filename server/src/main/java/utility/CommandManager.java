@@ -3,7 +3,9 @@ package utility;
 import commands.*;
 
 import java.util.*;
-
+/**
+ * Менеджер серверных команд. Хранит, регистрирует и предоставляет доступ к реализациям команд.
+ */
 public class CommandManager {
     public final Map<String, Command> commands = new HashMap<>();
     private final CollectionManager collectionManager;
@@ -13,6 +15,9 @@ public class CommandManager {
         registerAll();
     }
 
+    /**
+     * Регистрирует все доступные команды в рамках текущей серверной архитектуры.
+     */
     private void registerAll(){
         registerCommand(new HelpCommand(commands));
         registerCommand(new AddCommand(collectionManager));
@@ -33,6 +38,12 @@ public class CommandManager {
         commands.put(command.getName(), command);
     }
 
+    /**
+     * Возвращает команду по её имени.
+     *
+     * @param name имя команды
+     * @return объект {@link Command}, либо null, если команда не найдена
+     */
     public Command getCommand(String name){
         return commands.get(name);
     }

@@ -5,7 +5,9 @@ import commands.*;
 import java.util.HashMap;
 import java.util.Map;
 
-
+/**
+ * Менеджер клиентских команд. Позволяет регистрировать и извлекать команды по их имени.
+ */
 public class CommandManager {
     private final Map<String, ClientCommand> commandMap = new HashMap<>();
 

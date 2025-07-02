@@ -14,11 +14,26 @@ import java.io.ObjectOutputStream;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.util.logging.ConsoleHandler;
+import java.util.logging.Handler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
+/**
+ * Основной класс серверной части приложения.
+ * Запускает UDP-сервер, принимает и обрабатывает команды, отправляет ответы клиенту.
+ */
 public class Server {
     private static final int port = 12345;
+    private static final Logger logger = Logger.getLogger(Server.class.getName());
 
+    /**
+     * Точка входа. Запускает сервер, настраивает логирование, регистрирует команды и слушает входящие UDP-пакеты.
+     *
+     * @param args аргументы командной строки (не используются)
+     */
     public static void main(String[] args){
+        configureLogger(); // инициализация логгера
         try{
             FileManager fileManager = new FileManager();
             CollectionManager collectionManager = new CollectionManager(fileManager);
@@ -26,12 +41,12 @@ public class Server {
 
             // Хук на завершение работы
             Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-                System.out.println("Сервер завершает работу. Сохраняем коллекцию...");
+                logger.info("Сервер завершает работу. Сохраняем коллекцию...");
                 collectionManager.save();
             }));
 
             DatagramSocket socket = new DatagramSocket(port);
-            System.out.println("Сервер запущен...");
+            logger.info("Сервер запущен на порту " + port);
 
 
             while(true){
@@ -41,6 +56,8 @@ public class Server {
                 DatagramPacket receivePacket = new DatagramPacket(recieveData, recieveData.length);
                 socket.receive(receivePacket);
 
+                logger.info("Получен новый запрос от клиента: " + receivePacket.getAddress() + ":" + receivePacket.getPort());
+
                 //Десериализация команды
                 ByteArrayInputStream byteInput = new ByteArrayInputStream(receivePacket.getData(), 0 , receivePacket.getLength());
                 ObjectInputStream in = new ObjectInputStream(byteInput);
@@ -49,6 +66,9 @@ public class Server {
                 //Выполнение команды
                 String name = wrapper.getCommandName();
                 Request request = wrapper.getRequest();
+
+                logger.info("Выполняется команда: " + name);
+
                 Command command = commandManager.getCommand(name);
                 Response response = command != null
                         ? command.execute(request) : new ErrorResponse("Команда не найдена");
@@ -66,18 +86,30 @@ public class Server {
                 DatagramPacket packet = new DatagramPacket(sendData, sendData.length, clientAddress, clientPort);
                 socket.send(packet);
 
-                System.out.println("Ответ отправлен");
+                logger.info("Ответ отправлен клиенту: " + clientAddress + ":" + clientPort);
 
-                }catch (Exception inner){
-                    System.out.print("Ошибка обработки запроса: ");
-                    inner.printStackTrace();
+                }catch (Exception e){
+                    logger.log(Level.WARNING, "Ошибка обработки запроса: " + e.getMessage(), e);
                 }
             }
 
         }catch (Exception e){
-            System.out.println("Ошибка запуска сервера: ");
-            e.printStackTrace();
+            logger.log(Level.SEVERE, "Ошибка запуска сервера: " + e.getMessage(), e);
         }
+    }
+
+    /**
+     * Настраивает логгер Java Util Logging для отображения всех уровней логов в консоль.
+     */
+    private static void configureLogger() {
+        Logger rootLogger = Logger.getLogger("");
+        Handler consoleHandler = new ConsoleHandler();
+        consoleHandler.setLevel(Level.ALL);
+        rootLogger.setLevel(Level.ALL);
+        rootLogger.addHandler(consoleHandler);
+
+        // Отключим дублирование логов от стандартного обработчика
+        rootLogger.setUseParentHandlers(false);
     }
 
 }

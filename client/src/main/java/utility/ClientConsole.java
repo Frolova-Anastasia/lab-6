@@ -9,6 +9,10 @@ import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 
+/**
+ * Отвечает за запуск клиентской консоли и обработку команд от пользователя.
+ * Поддерживает интерактивный и скриптовый режим работы.
+ */
 public class ClientConsole {
     private InputProvider inputProvider;
     private final CommandManager commandManager;

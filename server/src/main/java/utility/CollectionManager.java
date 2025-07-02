@@ -7,6 +7,10 @@ import data.Products;
 import java.time.ZonedDateTime;
 import java.util.*;
 
+/**
+ * Класс, управляющий коллекцией объектов {@link Product}.
+ * Обеспечивает загрузку из файла, валидацию, добавление, очистку и сохранение коллекции.
+ */
 public class CollectionManager {
     private final List<Product> products = new LinkedList<>();
     private final FileManager fileManager;
@@ -21,10 +25,20 @@ public class CollectionManager {
         return products;
     }
 
+    /**
+     * Возвращает время инициализации коллекции.
+     *
+     * @return {@link ZonedDateTime} инициализации
+     */
     public ZonedDateTime getInitTime(){
         return initTime;
     }
 
+    /**
+     * Возвращает тип коллекции (например, LinkedList).
+     *
+     * @return имя класса коллекции
+     */
     public String getCollectionType(){
         return products.getClass().getSimpleName();
     }
@@ -44,6 +58,10 @@ public class CollectionManager {
         fileManager.loadToFile(container);
     }
 
+    /**
+     * Загружает коллекцию из XML-файла, указанного через переменную окружения FILE_NAME.
+     * Выполняет валидацию и регистрацию ID.
+     */
     private void loadFromFile() {
         Products container = fileManager.readXml();
         if (container != null && container.getProducts() != null) {
@@ -62,6 +80,10 @@ public class CollectionManager {
         }
     }
 
+    /**
+     * Проверяет корректность всех объектов в коллекции, включая уникальность ID продуктов и организаций.
+     * При обнаружении ошибок выводит сообщения и завершает работу.
+     */
     private void validateCollection() {
         List<String> validationErrors = new ArrayList<>();
         Set<Integer> seenProductIds = new HashSet<>();

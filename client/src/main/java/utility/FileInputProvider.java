@@ -7,6 +7,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+/**
+ * Реализация {@link InputProvider}, которая считывает строки из указанного файла.
+ * Используется для исполнения скриптов.
+ */
 public class FileInputProvider implements InputProvider{
     private final Iterator<String> lines;
 

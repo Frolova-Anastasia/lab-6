@@ -8,18 +8,32 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.function.IntPredicate;
 
+/**
+ * Класс, отвечающий за создание объектов {@link Product} с валидацией полей.
+ * Использует {@link InputProvider} для получения пользовательского ввода.
+ */
 public class ProductBuilder {
-    private final Scanner scanner = new Scanner(System.in);
     private InputProvider inputProvider;
 
     public ProductBuilder(InputProvider inputProvider) {
         this.inputProvider = inputProvider;
     }
 
+    /**
+     * Устанавливает новый источник ввода (например, консоль или файл).
+     *
+     * @param provider источник ввода
+     */
     public void setInputProvider(InputProvider provider) {
         this.inputProvider = provider;
     }
 
+    /**
+     * Собирает новый {@link Product}, запрашивая все необходимые поля у пользователя.
+     *
+     * @return новый объект Product
+     * @throws EndInputException если ввод был неожиданно завершён
+     */
     public Product builProduct() throws EndInputException {
         try {
         String name = askNonEmptyString("Введите название товара: ");

@@ -8,6 +8,9 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 
+/**
+ * Класс, отвечающий за отправку сериализованных команд на сервер и получение ответа.
+ */
 public class CommandSender {
     private final DatagramSocket socket;
     private final InetAddress serverAdd;
@@ -19,6 +22,13 @@ public class CommandSender {
         this.serverPort = serverPort;
     }
 
+    /**
+     * Отправляет команду и её аргументы на сервер.
+     *
+     * @param commandName имя команды
+     * @param request     объект запроса
+     * @throws IOException если произошла ошибка при передаче
+     */
     public void send(String commandName, Request request) throws IOException {
         CommandWrapper wrapper = new CommandWrapper(commandName, request);
         //Сериализация
@@ -33,6 +43,13 @@ public class CommandSender {
         socket.send(packet);
     }
 
+    /**
+     * Получает и десериализует ответ от сервера.
+     *
+     * @return объект ответа
+     * @throws IOException            если произошла ошибка при получении данных
+     * @throws ClassNotFoundException если класс ответа не найден
+     */
     public Response receive() throws IOException, ClassNotFoundException {
         byte[] recieveData = new byte[4096];
         DatagramPacket recievePacket = new DatagramPacket(recieveData, recieveData.length);

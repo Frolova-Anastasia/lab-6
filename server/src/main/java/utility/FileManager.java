@@ -11,6 +11,10 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Класс, отвечающий за чтение и запись коллекции в XML-файл с использованием JAXB.
+ * Путь к файлу берётся из переменной окружения FILE_NAME.
+ */
 public class FileManager {
     private final String filePath;
 
@@ -21,6 +25,11 @@ public class FileManager {
         }
     }
 
+    /**
+     * Читает коллекцию из XML-файла и возвращает объект-контейнер {@link Products}.
+     *
+     * @return загруженный контейнер продуктов или null в случае ошибки
+     */
     public Products readXml(){
         try (FileInputStream fileInputStream = new FileInputStream(filePath);
              BufferedInputStream bufferedInputStream = new BufferedInputStream(fileInputStream)) {
@@ -35,6 +44,11 @@ public class FileManager {
         return null;
     }
 
+    /**
+     * Сохраняет переданный контейнер {@link Products} в XML-файл.
+     *
+     * @param products объект-контейнер для сериализации
+     */
     public void loadToFile(Products products) {
         try (FileWriter fileWriter = new FileWriter(filePath)) {
             JAXBContext context = JAXBContext.newInstance(Products.class);
@@ -47,5 +61,4 @@ public class FileManager {
             System.err.println("Ошибка при сериализации в XML: " + e.getMessage());
         }
     }
-
 }
