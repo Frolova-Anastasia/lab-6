@@ -99,16 +99,26 @@ public class Server {
     }
 
     /**
-     * Настраивает логгер Java Util Logging для отображения всех уровней логов в консоль.
+     * Настраивает логгер Java Util Logging для отображения некоторых уровней логов в консоль.
      */
     private static void configureLogger() {
         Logger rootLogger = Logger.getLogger("");
-        Handler consoleHandler = new ConsoleHandler();
-        consoleHandler.setLevel(Level.ALL);
-        rootLogger.setLevel(Level.ALL);
+
+        // Удаляем все существующие обработчики
+        Handler[] handlers = rootLogger.getHandlers();
+        for (Handler handler : handlers) {
+            rootLogger.removeHandler(handler);
+        }
+
+        // Создаем новый консольный обработчик
+        ConsoleHandler consoleHandler = new ConsoleHandler();
+        consoleHandler.setLevel(Level.INFO); // Только INFO и выше: INFO, WARNING, SEVERE
+        consoleHandler.setFormatter(new SimpleFormatter());
+
+        rootLogger.setLevel(Level.INFO); //Уровень логирования всего приложения
         rootLogger.addHandler(consoleHandler);
 
-        // Отключим дублирование логов от стандартного обработчика
+        // Больше не используем родительские обработчики
         rootLogger.setUseParentHandlers(false);
     }
 
