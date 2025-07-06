@@ -36,7 +36,12 @@ public class ShowCommand implements Command{
         }
         StringBuilder sb = new StringBuilder("Содержимое коллекции:\n");
         for(Product p : products){
-            sb.append(p).append("\n");
+            String productStr = p.toString() + "\n";
+            if (sb.length() + productStr.length() > 3000) {
+                sb.append("... (вывод обрезан, превышен лимит в 3000 символов)\n");
+                break;
+            }
+            sb.append(productStr);
         }
         return new SuccessResponse(sb.toString());
     }
