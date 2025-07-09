@@ -35,23 +35,6 @@
         </manufacturer>
     </product>
     <product>
-        <id>6</id>
-        <name>pizza</name>
-        <coordinates>
-            <x>78</x>
-            <y>56</y>
-        </coordinates>
-        <creationDate>2025-06-26T17:21:30.1518832+03:00</creationDate>
-        <price>5667.9</price>
-        <unitOfMeasure>GRAMS</unitOfMeasure>
-        <manufacturer>
-            <id>47</id>
-            <name>DO</name>
-            <fullName>DODO</fullName>
-            <type>COMMERCIAL</type>
-        </manufacturer>
-    </product>
-    <product>
         <id>9</id>
         <name>cheese</name>
         <coordinates>
@@ -260,6 +243,56 @@
             <name>Samsung</name>
             <fullName>Samsung Electronics</fullName>
             <type>COMMERCIAL</type>
+        </manufacturer>
+    </product>
+    <product>
+        <id>19</id>
+        <name>Samsung TV</name>
+        <coordinates>
+            <x>684</x>
+            <y>300</y>
+        </coordinates>
+        <creationDate>2025-07-06T21:40:21.3727085+03:00</creationDate>
+        <price>29.9</price>
+        <unitOfMeasure>METERS</unitOfMeasure>
+        <manufacturer>
+            <id>58</id>
+            <name>Samsung</name>
+            <fullName>Samsung Electronics</fullName>
+            <type>COMMERCIAL</type>
+        </manufacturer>
+    </product>
+    <product>
+        <id>20</id>
+        <name>Samsung TV</name>
+        <coordinates>
+            <x>684</x>
+            <y>300</y>
+        </coordinates>
+        <creationDate>2025-07-09T09:58:49.996324145Z</creationDate>
+        <price>29.9</price>
+        <unitOfMeasure>METERS</unitOfMeasure>
+        <manufacturer>
+            <id>59</id>
+            <name>Samsung</name>
+            <fullName>Samsung Electronics</fullName>
+            <type>COMMERCIAL</type>
+        </manufacturer>
+    </product>
+    <product>
+        <id>21</id>
+        <name>cola</name>
+        <coordinates>
+            <x>563</x>
+            <y>3</y>
+        </coordinates>
+        <creationDate>2025-07-09T10:00:34.506711079Z</creationDate>
+        <price>4253668.0</price>
+        <manufacturer>
+            <id>60</id>
+            <name>COOLCOLA</name>
+            <fullName>HOTCOLA</fullName>
+            <type>TRUST</type>
         </manufacturer>
     </product>
 </products>

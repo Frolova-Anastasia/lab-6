@@ -1,0 +1,27 @@
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    container_name: lab6-server
+    networks:
+      - lab6-net
+    environment:
+      - FILE_NAME=/data/test.xml
+    volumes:
+      - ./test.xml:/data/test.xml
+
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    container_name: lab6-client
+    depends_on:
+      - server
+    networks:
+      - lab6-net
+    stdin_open: true
+    tty: true
+
+networks:
+  lab6-net:

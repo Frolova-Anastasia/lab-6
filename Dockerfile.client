@@ -1,0 +1,12 @@
+# Сборка
+FROM maven:3.9.6-eclipse-temurin-21 AS builder
+WORKDIR /app
+COPY . .
+RUN mvn -pl client -am clean package -DskipTests
+
+# Запуск
+FROM eclipse-temurin:21-jdk
+WORKDIR /client
+COPY --from=builder /app/client/target/client-fat.jar app.jar
+COPY ./client/scriptTest /client/scriptTest
+ENTRYPOINT ["java", "-jar", "app.jar"]

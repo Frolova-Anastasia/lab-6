@@ -1,0 +1,13 @@
+# Сборка
+FROM maven:3.9.6-eclipse-temurin-21 AS builder
+WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
+
+# Запуск
+FROM eclipse-temurin:21-jdk
+WORKDIR /server
+COPY --from=builder /app/server/target/server-1.0-SNAPSHOT.jar app.jar
+ENV FILE_NAME=/data/test.xml
+VOLUME /data
+ENTRYPOINT ["java", "-jar", "app.jar"]
