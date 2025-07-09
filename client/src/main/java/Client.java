@@ -17,7 +17,7 @@ public class Client {
      */
     public static void main(String[] args){
         try{
-            InetAddress serverAddress = InetAddress.getByName("localhost");
+            InetAddress serverAddress = InetAddress.getByName("server");
             int serverPort = 12345;
             DatagramSocket socket = new DatagramSocket();
 

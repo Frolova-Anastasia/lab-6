@@ -14,10 +14,7 @@ import java.io.ObjectOutputStream;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
-import java.util.logging.ConsoleHandler;
-import java.util.logging.Handler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.logging.*;
 
 /**
  * Основной класс серверной части приложения.
@@ -99,7 +96,7 @@ public class Server {
     }
 
     /**
-     * Настраивает логгер Java Util Logging для отображения некоторых уровней логов в консоль.
+     * Настраивает логгер Java Util Logging для отображения всех уровней логов в консоль.
      */
     private static void configureLogger() {
         Logger rootLogger = Logger.getLogger("");
