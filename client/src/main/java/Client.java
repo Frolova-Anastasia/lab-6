@@ -29,6 +29,15 @@ public class Client {
             ClientConsole console = new ClientConsole(commandManager, builder);
 
             commandManager.initCommands(sender, builder, console);
+            //Хук на завершение работы клиента
+            Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+                System.out.println("\nКлиент завершает работу. До свидания!");
+                try {
+                    sender.close(); // закрываем соединение
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }));
 
             System.out.println("Клиент запущен. Введите команду: ");
 
